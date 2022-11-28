@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Inter", system-ui;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: #e7f6ff;
+  position: relative;
+  padding: 85px 20px;
+  margin: 0 auto;
+}
+.noneStylesForNL {
+  color: #000000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+.wrapper {
+  background: white;
+  max-width: 1080px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+header {
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header__left {
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+
+  h3 {
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+  }
+  p {
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    color: #9d9d9d;
+    font-size: 14px;
+    margin: 0;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+}
+.header__rigth {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 45px;
+  border-radius: 20px;
+
+  li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 30px;
+  }
+  span {
+    padding-left: 10px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5c5c5c;
+  }
+}
+.content {
+  min-height: 550px;
+  padding: 0 50px 50px 50px;
+  max-width: 1080px;
+  background: #ffffff;
+  border-radius: 0 0 40px 40px;
+  margin: 0 auto;
+}
+.search__block {
+  border-bottom: 1px solid #eaeaea;
+  border-radius: 10px;
+  display: flex;
+  padding: 0 15px;
+  input {
+    border: 0;
+    padding: 13px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 5px;
+    width: 200px;
+  }
+  img {
+    margin-left: 5px;
+  }
+}
+.flex__search__block {
+  margin: 0 0 40px 0;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  // border-radius: 20px;
+  width: 210px;
+  height: 260px;
+
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // position: relative;
+  margin: 40px 16px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: 1px solid #ececec;
+  &:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 150px;
+  }
+  .justify_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    color: #bdbdbd;
+  }
+  p {
+    width: 150px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 14px;
+    color: #000000;
+  }
+  b {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+  }
+  .plus {
+    width: 32px;
+    height: 32px;
+
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+
+    cursor: pointer;
+  }
+  .unlike {
+    border: 1px solid #ececec;
+    border-radius: 25%;
+    position: absolute;
+    margin: 25px 130px 0px 0px;
+    cursor: pointer;
+  }
+}
+
+.cards__inner {
+  max-width: 980px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.drawer {
+  position: fixed;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  h2 {
+    padding: 30px;
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+.cart_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px 30px;
+  // width: 325px;
+
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.02);
+    transform: translateY(-5px);
+  }
+
+  p {
+    width: 150px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  b {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .cross {
+    cursor: pointer;
+  }
+}
+.carts_inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 55vh;
+  overflow: auto;
+}
+.cartTotalBlock {
+  margin: 0 auto;
+  width: 340px;
+  li {
+    // margin: 20px 30px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 27px;
+  }
+  div {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dashed #dfdfdf;
+    position: relative;
+    top: -4px;
+    margin: 0 10px;
+  }
+  button {
+    margin-left: 33px;
+  }
+}
+
+// styles for EmtyShoppingBasket
+
+.EmtyShoppingBasket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  margin: 20px 30px;
+  margin: 0 auto;
+  min-height: 85vh;
+  div {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // margin-bottom: 20px;
+    img {
+      margin: 0 auto;
+    }
+    b {
+      text-align: center;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      color: #000000;
+    }
+    p {
+      margin: 0 auto;
+      width: 285px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #000000;
+      opacity: 0.4;
+    }
+  }
+}
+// стили для thereIsNoMarks
+
+.thereIsNoMarksPage {
+  padding-top: 130px;
+  width: 1080px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    width: 254px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+  }
+  p {
+    width: 290px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.4;
+  }
+}

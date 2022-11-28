@@ -1,0 +1,27 @@
+.greenBtn {
+  width: 275.25px;
+  padding: 15px 70px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #9dd458;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+
+  cursor: pointer;
+  color: #ffffff;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.04);
+    background: lighten(#9dd458, 5%);
+  }
+  &:active {
+    background: darken(#9dd458, 5%);
+  }
+}
